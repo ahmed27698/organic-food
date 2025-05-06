@@ -1,0 +1,54 @@
+<html>
+<head>
+ <title>Mouse Events</title>
+ <script>
+  function init()
+  {
+   var panel = document.getElementById('panel')
+   var btn = document.getElementById('btn')
+   
+   btn.addEventListener("dblclick", dblClick)
+   btn.addEventListener("mousedown", mouseDown)
+   btn.addEventListener("mouseup", mouseUp)
+   btn.addEventListener("mouseover", mouseOver)
+   btn.addEventListener("mouseout", mouseOut)
+  }
+  
+  function click()
+  {
+   panel.innerHTML += "Mouse clicked<br/>"
+  }
+  
+  function dblClick()
+  {
+   panel.innerHTML += "Mouse double clicked<br/>"
+  }
+  function mouseDown()
+  {
+   panel.innerHTML += "Mouse down<br/>"
+  }
+  function mouseUp()
+  {
+   panel.innerHTML += "Mouse up<br/>"
+  }
+  function mouseOver()
+  {
+   panel.innerHTML += "Mouse over<br/>"
+  }
+  function mouseOut()
+  {
+   panel.innerHTML += "Mouse out<br/>"
+  }
+  function mouseMove()
+  {
+   panel.innerHTML += "Mouse moved<br/>"
+  }
+ </script>
+</head>
+<body onload="init()">
+<input type="button" id="btn" value="Click Me" onclick="click()"
+       onmousemove="mouseMove"/>
+<h3>Mouse events performed are</h3>
+<p id="panel"></p>
+</body>
+</html>
